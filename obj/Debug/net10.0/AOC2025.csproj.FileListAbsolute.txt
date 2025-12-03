@@ -1,0 +1,14 @@
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.GeneratedMSBuildEditorConfig.editorconfig
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.AssemblyInfoInputs.cache
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.AssemblyInfo.cs
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.csproj.CoreCompileInputs.cache
+/home/norbo/Programming/AOC2025/bin/Debug/net10.0/AOC2025
+/home/norbo/Programming/AOC2025/bin/Debug/net10.0/AOC2025.deps.json
+/home/norbo/Programming/AOC2025/bin/Debug/net10.0/AOC2025.runtimeconfig.json
+/home/norbo/Programming/AOC2025/bin/Debug/net10.0/AOC2025.dll
+/home/norbo/Programming/AOC2025/bin/Debug/net10.0/AOC2025.pdb
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.dll
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/refint/AOC2025.dll
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.pdb
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/AOC2025.genruntimeconfig.cache
+/home/norbo/Programming/AOC2025/obj/Debug/net10.0/ref/AOC2025.dll
