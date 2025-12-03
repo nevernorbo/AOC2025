@@ -4,32 +4,33 @@ static class Day03
 {
     public static void Run()
     {
-        var banks = File.ReadAllLines("./data/day03.txt");
+        var banks = File.ReadAllLines("./data/day03_small.txt");
 
         Console.WriteLine($"Part 1: {CalculateJoltage(banks, 2)}");
         Console.WriteLine($"Part 2: {CalculateJoltage(banks, 12)}");
     }
 
-    public static long CalculateJoltage(string[] banks, int nrOfBatteries)
+    public static long CalculateJoltage(string[] lines, int batteryCount)
     {
         long totalJoltage = 0L;
-        foreach (var bankStr in banks)
+
+        foreach (var line in lines)
         {
-            var bank = bankStr.Select(c => long.Parse(c.ToString())).ToList();
             string joltage = "";
-            int maxIndex = 0;
+            int startIndex = 0;
 
-            for (int i = 1; i <= nrOfBatteries; i++)
+            for (int pickedCount = 0; pickedCount < batteryCount; pickedCount++)
             {
-                int endIndex = (nrOfBatteries - i) != 0 ? -(nrOfBatteries - i) : bank.Count;
-
-                int windowSize = endIndex < 0 ? bank.Count + endIndex - maxIndex : endIndex - maxIndex;
-                var window = bank.Skip(maxIndex).Take(windowSize);
-
-                long maxBattery = window.Max();
-                maxIndex = window.ToList().IndexOf(maxBattery) + maxIndex + 1;
-
-                joltage += maxBattery.ToString();
+                char maxValue = '\0';
+                for (int i = startIndex; i <= line.Length - (batteryCount - pickedCount); i++)
+                {
+                    if (line[i] > maxValue)
+                    {
+                        maxValue = line[i];
+                        startIndex = i + 1;
+                    }
+                }
+                joltage += maxValue;
             }
 
             totalJoltage += long.Parse(joltage);
