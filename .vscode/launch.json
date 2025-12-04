@@ -3,5 +3,13 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "name": "C#: AOC2025 Debug",
+            "type": "coreclr",
+            "program": "${workspaceFolder}/bin/Debug/net10.0/AOC2025.dll",
+            "request": "launch",
+            "args": ["4"],
+        }
+    ]
 }
