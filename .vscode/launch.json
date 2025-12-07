@@ -9,7 +9,7 @@
             "type": "coreclr",
             "program": "${workspaceFolder}/bin/Debug/net10.0/AOC2025.dll",
             "request": "launch",
-            "args": ["4"],
+            "args": ["6"],
         }
     ]
 }
