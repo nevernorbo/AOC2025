@@ -1,5 +1,3 @@
-using System.Data;
-
 static class Day06
 {
     public static void Run()
@@ -80,7 +78,7 @@ static class Day06
             }
         }
 
-        totalSum += localAmount; // The last localAmount won't get added in the loop 
+        totalSum += localAmount; // The last localAmount won't get added in the loop
 
         return totalSum;
     }
