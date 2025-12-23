@@ -87,7 +87,9 @@ static class Day05
         string? line;
         while ((line = reader.ReadLine()) != "")
         {
-            var split = line.Split('-').Select(long.Parse).ToArray();
+            var split = line.Split('-')
+                .Select(long.Parse)
+                .ToArray();
             var range = new Range { Start = split[0], End = split[1] };
 
             yield return range;

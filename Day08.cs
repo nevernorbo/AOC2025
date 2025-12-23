@@ -15,6 +15,14 @@ static class Day08
             Y = y;
             Z = z;
         }
+
+        public long DistanceSquared(LongVector3 other)
+        {
+            long dx = X - other.X;
+            long dy = Y - other.Y;
+            long dz = Z - other.Z;
+            return dx * dx + dy * dy + dz * dz;
+        }
     }
 
     public static void Run()
@@ -90,17 +98,9 @@ static class Day08
     {
         return Enumerable.Range(0, points.Count)
             .SelectMany(i => Enumerable.Range(i + 1, points.Count - (i + 1))
-                .Select(j => new Edge(i, j, DistanceSquared(points[i], points[j]))))
+                .Select(j => new Edge(i, j, points[i].DistanceSquared(points[j]))))
             .OrderBy(x => x.Weight)
             // .Take(limit)
             .ToList();
-    }
-
-    private static long DistanceSquared(LongVector3 p, LongVector3 q)
-    {
-        long dx = p.X - q.X;
-        long dy = p.Y - q.Y;
-        long dz = p.Z - q.Z;
-        return dx * dx + dy * dy + dz * dz;
     }
 }
