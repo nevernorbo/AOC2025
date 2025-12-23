@@ -7,6 +7,7 @@
     Day05.Run,
     Day06.Run,
     Day07.Run,
+    Day08.Run,
 ];
 
 string input = args.Length != 0 ? args[0] : "";
